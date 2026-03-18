@@ -1,26 +1,17 @@
 pipeline {
-    agent { label 'maven-node' }   // IMPORTANT (your slave label)
+    agent { label 'maven-node' }   // slave node
 
     tools {
         maven 'maven'
         jdk 'JDK'
-        git 'git'   // 👈 ADD THIS LINE
+        git 'git'
     }
 
     stages {
-         stage('Clean Workspace') {
+
+        stage('Clean Workspace') {
             steps {
                 deleteDir()
-            }
-        }
-         stage('Build') {
-            steps {
-                bat 'mvn clean package'
-            }
-        }
-        stage('Clone') {
-            steps {
-              
             }
         }
 
