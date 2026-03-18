@@ -9,12 +9,6 @@ pipeline {
 
     stages {
 
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
