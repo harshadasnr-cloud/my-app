@@ -2,7 +2,7 @@ pipeline {
     agent { label 'master-node1' }   // replace with your node label
 
     tools {
-        maven 'Maven'   // ensure Maven is configured in Jenkins
+        maven 'maven'   // ensure Maven is configured in Jenkins
     }
 
     stages {
