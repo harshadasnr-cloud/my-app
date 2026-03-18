@@ -1,15 +1,15 @@
 pipeline {
-    agent { label 'master-node1' }   // replace with your node label
+    agent { label 'maven-node' }   // IMPORTANT (your slave label)
 
     tools {
-        maven 'maven'   // ensure Maven is configured in Jenkins
+        maven 'maven'
+        jdk 'jdk'
     }
 
     stages {
-
-        stage('Clone Code') {
+        stage('Clone') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/your-repo.git'
             }
         }
 
