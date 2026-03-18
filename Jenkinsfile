@@ -4,6 +4,7 @@ pipeline {
     tools {
         maven 'maven'
         jdk 'JDK'
+        git 'git'   // 👈 ADD THIS LINE
     }
 
     stages {
