@@ -8,9 +8,19 @@ pipeline {
     }
 
     stages {
+         stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+         stage('Build') {
+            steps {
+                bat 'mvn clean package'
+            }
+        }
         stage('Clone') {
             steps {
-              git 'https://github.com/harshadasnr-cloud/my-app.git'
+              
             }
         }
 
